@@ -230,6 +230,14 @@ a:visited, a:focus, a:hover, a:active {
       audio2.play();
   });
 
+   // Button to play the second audio
+   document.getElementById('play-me').addEventListener('click', () => {
+            audio2.loop = false;
+            audio2.play();
+            // Change the icon to unmute when the play button is clicked
+            document.querySelector('#unmute img').src = 'images/volume-100-swamp-green.svg';
+        });
+
   // Function to toggle mute/unmute
   function toggleMute() {
       if (audioContext.state === 'running') {
