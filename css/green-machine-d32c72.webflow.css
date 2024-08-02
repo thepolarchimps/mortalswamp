@@ -26,6 +26,9 @@
 
 .body {
   background-color: #111;
+  background-image: linear-gradient(#000c, #000c), url('../images/mortal-swamp.webp');
+  background-position: 0 0, 0 0;
+  background-size: auto, auto;
   margin-top: 60px;
 }
 
@@ -135,9 +138,9 @@
 }
 
 .button {
-  color: rgba(255, 255, 255, .5);
+  color: #ffffff80;
   letter-spacing: 3px;
-  background-color: rgba(56, 152, 236, 0);
+  background-color: #3898ec00;
   background-image: url('../images/Button-Image.png');
   background-position: 50%;
   background-repeat: no-repeat;
@@ -205,7 +208,7 @@
 }
 
 .slider {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #0000;
   width: 100vw;
   height: 100vh;
   padding-top: 112px;
@@ -266,10 +269,7 @@
   align-items: center;
   display: flex;
   position: fixed;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .cursor__dot {
@@ -468,14 +468,14 @@
 }
 
 .tab-link {
-  background-color: rgba(221, 221, 221, 0);
+  background-color: #ddd0;
   padding-left: 0;
   padding-right: 10px;
 }
 
 .tab-link.w--current {
   color: #521010;
-  background-color: rgba(200, 200, 200, 0);
+  background-color: #c8c8c800;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -484,7 +484,7 @@
 
 .tab-link-tab-2, .tab-link-tab-3 {
   color: #616161;
-  background-color: rgba(221, 221, 221, 0);
+  background-color: #ddd0;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -630,15 +630,13 @@
 
 .sub-title.das-typed {
   position: absolute;
-  top: 0%;
-  bottom: auto;
-  left: 0%;
-  right: 0%;
+  inset: 0% 0% auto;
 }
 
 .button-div {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
+  flex-flow: wrap;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
@@ -659,7 +657,7 @@
 .main-buttons:hover {
   color: #24f29c;
   -webkit-text-stroke-width: 0px;
-  background-color: rgba(36, 242, 156, 0);
+  background-color: #24f29c00;
 }
 
 .main-buttons.alternative {
@@ -766,7 +764,7 @@
 
 .text-field, .text-field-2 {
   color: #24f29c;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: #fff0;
   border: 2px solid #24f29c;
   border-radius: 2px;
   font-family: Silkscreen, sans-serif;
@@ -798,7 +796,7 @@
 .submit-button:hover {
   color: #24f29c;
   -webkit-text-stroke-width: 0px;
-  background-color: rgba(36, 242, 156, 0);
+  background-color: #24f29c00;
 }
 
 .form {
@@ -817,32 +815,23 @@
 
 .overlay-mask {
   position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .crt {
-  display: block;
+  display: none;
   position: fixed;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .grid {
   display: flex;
   position: absolute;
-  top: auto;
-  bottom: 40%;
-  left: 0%;
-  right: 0%;
+  inset: auto 0% 40%;
 }
 
 .success-message {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #0000;
 }
 
 .text-block-5 {
@@ -963,18 +952,12 @@
   height: 100%;
   display: none;
   position: fixed;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .div-block-5 {
   position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .popup-container {
@@ -1062,6 +1045,10 @@
 }
 
 @media screen and (max-width: 479px) {
+  .main-title-div {
+    padding-bottom: 160px;
+  }
+
   .intro-title {
     flex-wrap: nowrap;
     width: 100%;
@@ -1077,6 +1064,7 @@
   .crt {
     min-width: 100%;
     min-height: 100%;
+    display: block;
     position: fixed;
     bottom: 0%;
   }
