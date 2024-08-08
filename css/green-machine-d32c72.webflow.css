@@ -819,7 +819,7 @@
 }
 
 .crt {
-  display: none;
+  display: block;
   position: fixed;
   inset: 0%;
 }
@@ -985,6 +985,16 @@
   width: 24px;
   height: 24px;
   display: block;
+}
+
+.suddervision {
+  width: 250px;
+}
+
+.text-block-6 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-family: Silkscreen, sans-serif;
 }
 
 @media screen and (max-width: 991px) {
