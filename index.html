@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Wed Jul 10 2024 21:37:58 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Fri Dec 20 2024 18:10:02 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6681e3ac7ae13ba2e89f036c" data-wf-site="6681e3ab7ae13ba2e89f02f4">
 <head>
   <meta charset="utf-8">
@@ -28,19 +28,14 @@
       </div>
       <div class="welcome-content">
         <div class="main-title-div">
-          <a id="unmute" data-w-id="6628fb7a-73db-12c8-44df-e3e1e603dbdf" href="#" class="w-inline-block"><img src="images/volume-cross-swamp-green.svg" loading="lazy" width="161" alt="" class="muted"></a>
-          <h1 class="intro-title-main">∞ MORTAL SWAMP v0.1 ∞</h1>
-          <div class="sub-title">&gt; Green Works Bristol<br><br>10.08.2024<br><br>13:00 - 21:00<br>‍‍<br>Arcadia Roots<br>Devlish<br>Drifta<br>Rebel and the banned<br>MORTAL SWAMP DJS<br>SPAGHETTI LEGS DJs<br><br>Confirmed<br></div>
+          <h1 class="intro-title-main">∞ MORTAL SWAMP ∞</h1>
+          <div class="sub-title">Season&#x27;s Greetings and Happy Holidays for 2024.<br><br>Lot&#x27;s of love from your neighbourhood Swamp Crew.<br><br><br></div><img src="images/holly-berry-bright-green.svg" loading="lazy" alt="" class="image-5">
           <div class="typewriter-container">
             <p class="sub-title das-typed"></p>
           </div>
         </div>
-        <div class="text-block-6">Powered by:</div><img src="images/shuddervision-sound-system-white.png" loading="lazy" sizes="(max-width: 479px) 79vw, 250px" srcset="images/shuddervision-sound-system-white.png 500w, images/shuddervision-sound-system-white.png 800w, images/shuddervision-sound-system-white.png 1080w, images/shuddervision-sound-system-white.png 1280w" alt="" class="suddervision">
         <div class="button-div">
-          <a href="#" id="play-me" target="_blank" class="main-buttons alternative w-button">Play me</a>
-          <a href="https://www.headfirstbristol.co.uk/whats-on/green-works/sat-10-aug-mortal-swamp-v0-1-powered-by-shuddervision-sound-113256" target="_blank" class="main-buttons w-button">Tickets £10</a>
-          <a href="#" fs-modal-element="open" target="_blank" class="main-buttons alternative w-button">Read me</a>
-          <a href="https://linktr.ee/mortalswamp" target="_blank" class="main-buttons w-button">👋 SOCIALS</a>
+          <a href="#" id="play-me" target="_blank" class="main-buttons alternative w-button">Click Me on 25.12.25</a>
         </div>
       </div>
     </div>
@@ -198,68 +193,6 @@ a:visited, a:focus, a:hover, a:active {
 }
 </style>
   <script>
-</script>
-<script>
-  // Function to create and return a new audio element
-  function createAudioElement(src) {
-      const audio = new Audio(src);
-      audio.controls = false; // No controls
-      return audio;
-  }
-
-  // Create the audio context
-  const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-
-  // Create two audio elements
-  const audio1 = createAudioElement('audio/intro-loop.wav');
-  const audio2 = createAudioElement('audio/swamp-message.wav');
-
-  // Connect the audio elements to the audio context
-  const track1 = audioContext.createMediaElementSource(audio1);
-  const track2 = audioContext.createMediaElementSource(audio2);
-
-  // Connect the tracks to the destination (speakers)
-  track1.connect(audioContext.destination);
-  track2.connect(audioContext.destination);
-
-  // Play the first audio immediately and loop it
-  audio1.loop = true;
-  audio1.play();
-
-  // Button to play the second audio
-  document.getElementById('play-me').addEventListener('click', () => {
-      audio2.loop = false;
-      audio2.play();
-  });
-
-   // Button to play the second audio
-   document.getElementById('play-me').addEventListener('click', () => {
-            audio2.loop = false;
-            audio2.play();
-            // Change the icon to unmute when the play button is clicked
-            document.querySelector('#unmute img').src = 'images/volume-100-swamp-green.svg';
-        });
-
-  // Function to toggle mute/unmute
-  function toggleMute() {
-      if (audioContext.state === 'running') {
-          audioContext.suspend().then(() => {
-              console.log('Audio context suspended');
-              document.querySelector('#unmute img').src = 'images/volume-cross-swamp-green.svg';
-          });
-      } else if (audioContext.state === 'suspended') {
-          audioContext.resume().then(() => {
-              console.log('Audio context resumed');
-              document.querySelector('#unmute img').src = 'images/volume-100-swamp-green.svg';
-          });
-      }
-  }
-
-  // Event listener for the unmute button
-  document.getElementById('unmute').addEventListener('click', (event) => {
-      event.preventDefault(); // Prevent default link behaviour
-      toggleMute();
-  });
 </script>
 </body>
 </html>
